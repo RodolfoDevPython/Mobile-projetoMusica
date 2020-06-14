@@ -83,44 +83,16 @@ export default function Exercise() {
             </Text>
             <View style={styles.group}>
 
-                { 
-                    // data.map( (el) => {
-
-                    //     // let alternativa = el.RespostaCerta ? el.RespostaCerta.descricao : "nao tem valor";
-                    //     if (el.RespostaCerta) {
-                    //         console.log(el.RespostaCerta.descricao)
-                    //         let alternativa = el.RespostaCerta.descricao;
-
-                    //         return (
-                    //             <TouchableOpacity style={styles.answer}>
-                    //                 <Text style={styles.alternative}>{alternativa}</Text>
-                    //             </TouchableOpacity>
-                    //         );
-                    //     }
-
-                    //     // return (
-                    //     //     <TouchableOpacity style={styles.answer}>
-                    //     //         <Text style={styles.alternative}>{alternativa}</Text>
-                    //     //     </TouchableOpacity>
-                    //     // );
-                    // }) 
-                    
-                }
-
                 <FlatList 
                     data={data}
                     horizontal={false}
                     showsHorizontalScrollIndicator={true}
                     numColumns={2}
                     renderItem={ ({ item }) => {
-                            cont++;
 
                             if (item.RespostaCerta) {
                             
                                     let alternativa = item.RespostaCerta.descricao;
-                                    console.log("aqui---------------------")
-                                    console.log(item.RespostaCerta)
-                                    console.log(alternativa)
 
                                     return (    
                                         <TouchableOpacity style={styles.answer}>
@@ -128,10 +100,6 @@ export default function Exercise() {
                                         </TouchableOpacity>
                                     )
                             }
-                            
-                            
-                            // console.log(el.index)
-                            // console.log(el.item.RespostaCerta)
                             
                         }
                     }/> 
