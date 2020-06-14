@@ -1,0 +1,10 @@
+#PRECISO TERMINAR A BUSCA POR EXERCICIOS ESTÁ VINDO COM O JSON DUPLICADO...
+
+EX: --> 
+    { exercicio: [ id: 1 , resposta: 1 ]}
+    { exercicio: [ id: 1, resposta: 2 ]}
+
+Possivel Resolução:
+
+    Criar uma forma de fazer um distinct
+    ou um group by

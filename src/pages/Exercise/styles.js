@@ -20,21 +20,26 @@ const styles = StyleSheet.create({
 
     group: {
         flex: 1,
-        flexDirection: "row",
-        flexWrap: "wrap"
+        flexDirection: "column",
+        flexWrap: "wrap",
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 1,
     },
 
     answer: {
-        minWidth: '50%',
-        minHeight: '50%',
+        minWidth: '30%',
+        maxWidth: '50%',
+        minHeight: '30%',
         borderWidth: 1,
+        padding: 12,
     },
 
     alternative: {
         flex: 1,
         textAlign: "center",
         textAlignVertical: "center",
-        borderWidth: 1
+        
     },
 
     content: {

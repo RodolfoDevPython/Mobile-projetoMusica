@@ -12,13 +12,15 @@ import Drawer from './components/DrawerNavigation';
 
 const Stack = createStackNavigator();
 
+import { ContextProvider } from "./contexts/modulo-chose";
+
 export default function Routes() {
     return(
         <NavigationContainer>
+            <ContextProvider>
             <Stack.Navigator 
                 initialRouteName="Main"
-                screenOptions={{ headerShown: false }}
-            >
+                screenOptions={{ headerShown: false }}>
                 <Stack.Screen
                     name="Main"
                     component={Main}
@@ -33,13 +35,14 @@ export default function Routes() {
                 />
                 <Stack.Screen 
                     name="Home"
-                    component={Drawer}
-                />
+                    component={Drawer} />
                 <Stack.Screen 
                     name="Exercise"
                     component={Exercise}
                 />
             </Stack.Navigator>
+            </ContextProvider>    
         </NavigationContainer>
+        
     );
 }
